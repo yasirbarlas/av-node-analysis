@@ -1,5 +1,5 @@
 # Network Analysis of the Atrioventricular Node
 
-The work presented here is in support of an academic paper, and an abstract can be found [here](https://doi.org/10.1016/j.bpj.2023.11.2779).
+The work presented here is in support of an academic paper, which can be found [here](https://arxiv.org/abs/2405.15841).
 
 We use ideas from network science on the atrioventricular (AV) node, and produce a network based on a sampled set of regions on the AV node. A matrix is constructed based on the means of these regions (which we select using squares), where each column represents a region of the AV node and each row represents the mean at a certain point of time (or frame). The matrix is then standardised, and the first principal component is removed using principal component analysis (PCA) (if desired). A correlation matrix is then constructed from the standardised matrix (or reconstructed matrix after PCA). A network is then constructed based on satisfying a certain target mean degree, by selecting a correlation threshold appropriately. An edge between a pair of points is then included in the network, if the correlation between the two points meets this correlation threshold. Statistics, such as the clustering coefficient and small-world coefficient, are calculated and appended to a .csv file for analysis.
